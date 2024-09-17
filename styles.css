@@ -1,0 +1,343 @@
+/* -------------------- IMPORTED FONTS -------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+/*-------------------- CSS RESET ---------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -------------------- ROOT VARIABLES --------------------------------------- */
+:root {
+	/* FONT SIZES */
+	--h1-size: 2.5em;
+	--h2-size: 1.75em;
+	--text-size: 1.25em;
+
+	/* COLORS */
+	--green-color: #06A816;
+	--orange-color: #E75D02;
+	--black-color: #000000;
+	--white-color: #ffffff;
+
+/* FONTS */
+	--header-font: 'Irish Grover', cursive;
+	--body-font: 'Habibi', serif;
+	--text-color: var(--black-color);
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+/* BODY */
+body {
+	font-family: var(--body-font);
+	background-color: var(--white-color);
+	color: var(--text-color);
+}
+
+/* HEADER */
+header {
+	background-color: var(--green-color);
+	text-align: center;
+	padding: 20px;
+}
+
+header h1 {
+	font-family: var(--header-font);
+	color: var(--white-color);
+	font-size: var(--h1-size);
+	text-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+	margin-bottom: 20px;
+}
+
+header p {
+	color: var(--white-color);
+	font-style: italic;
+}
+
+/* NAVIGATION */
+nav {
+	margin-top: 30px;
+}
+
+nav ul {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+nav a {
+	color: var(--white-color);
+	background-color: var(--orange-color);
+	padding: 10px;
+	text-decoration: none;
+	text-align: center;
+	border-radius: 5px;
+	font-family: var(--body-font);
+	font-weight: bold;
+	width: 250px;
+	display: inline-block;
+	margin: 10px;
+	border: 1px solid var(--white-color);
+}
+
+#top-button a{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	text-decoration: none;
+	background-color: var(--orange-color);
+	color: var(--white-color);
+	font-family: var(--body-font); 
+	padding: 20px 15px;
+	border: 2px solid var(--white-color); 
+	border-radius: 5px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+/* MAIN CONTENT */
+main {
+	padding: 20px;
+}
+
+main p {
+	line-height: 1.6;
+}
+
+main h2 {
+	font-family: var(--header-font);
+	font-size: var(--h2-size);
+	color: var(--text-color);
+	line-height: 2;
+}
+
+main h3 {
+	font-family: var(--header-font);
+	font-size: var(--text-size);
+	color: var(--text-color);
+	margin-top: 10px;
+	text-align: center;
+	padding: 10px;
+}
+
+/* LIST & IMAGE STYLING */
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+ul img {
+	width: 100%;
+}
+
+section li {
+	display: block;
+	margin: 20px;
+}
+
+/* IMAGE & CAPTION */
+figure {
+	position: relative;
+	width: 100%; 
+	margin: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+figcaption {
+	position: absolute;
+	bottom: 50%;
+	left: 50%;
+	transform: translate(-50%, 0);
+	background-color: rgba(0, 0, 0, 0.7);
+	color: var(--white-color);
+	text-align: center;
+	padding: 10px;
+	font-size: var(--text-size);
+	font-family: var(--body-font);
+	width: 45%;
+}
+
+/* FOOTER */
+footer {
+	background-color: var(--green-color);
+	padding: 20px;
+	text-align: center;
+	color: var(--white-color);
+	line-height: 1.5;
+}
+
+footer h2 {
+	font-family: var(--header-font);
+	font-size: var(--h2-size);
+	line-height: 2;
+}
+
+footer a {
+	text-decoration: none;
+	color: var(--white-color);
+}
+
+.hours {
+	margin-top: 50px;
+}
+
+.copyright {
+	font-family: var(--body-font);
+	background-color: var(--white-color);
+	color: var(--green-color);
+	margin: 15px;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+/*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 768px) {
+
+ header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+	}
+
+	nav ul {
+		display: flex;
+		flex-direction: row;
+	}
+
+	ul {
+  display: grid;
+  grid-template-columns: repeat(2, 300px); 
+		justify-content: space-evenly;
+ }
+
+	footer { 
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.hours { 
+		margin: 0;
+	}
+}
+
+/*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media (min-width: 1024px) {
+
+	.container {
+		display: flex;
+  flex-wrap: nowrap;
+		background-color: var(--green-color);
+ }
+
+	header {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	nav {
+			flex: 1;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+	}
+
+	nav ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-between;
+	}
+
+	main ul {
+		display: grid;
+		grid-template-columns: repeat(3, 300px); 
+		justify-content: space-evenly;
+	}
+
+	footer {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+ }
+
+	.contact, .hours {
+		display: flex;
+		flex-wrap: wrap;
+		width: 50%; 
+		}
+
+	.footer-column {
+			width: 50%;
+	}
+}
+
+/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+@media (min-width: 1280px) {
+
+	nav { 
+		justify-content: flex-end;
+	}
+
+	main ul {
+		display: grid;
+		grid-template-columns: repeat(4, 300px); 
+		justify-content: space-evenly;
+	}
+}
